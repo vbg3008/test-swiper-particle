@@ -1,5 +1,5 @@
-import ParticlesNetwork from "./ParticlesNetwork ";
-import Carousal from "./Carousal";
+import ParticlesNetwork from "./components/ParticlesNetwork ";
+import Carousal from "./components/Carousal";
 import "./App.css";
 import React from "react";
 
