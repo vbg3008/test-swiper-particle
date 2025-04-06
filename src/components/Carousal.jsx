@@ -3,9 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 
 const Carousal = () => {
+
   return (
     <div className="bg-[url('/your-dark-texture.jpg')] bg-cover bg-center  px-4">
       <Swiper
@@ -13,6 +14,11 @@ const Carousal = () => {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
+        autoplay={{
+          delay: 1000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false
+         }}
         coverflowEffect={{
           rotate: 40,
           stretch: 0,
@@ -21,7 +27,7 @@ const Carousal = () => {
           slideShadows: true,
         }}
         pagination={{ clickable: true }}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination,Autoplay]}
         className="mySwiper"
       >
         {[
@@ -35,7 +41,7 @@ const Carousal = () => {
           "nature-8.jpg",
           "nature-9.jpg",
         ].map((img, idx) => (
-          <SwiperSlide key={idx} >
+          <SwiperSlide key={idx}>
             <img
               src={`https://swiperjs.com/demos/images/${img}`}
               alt={`slide-${idx}`}
