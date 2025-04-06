@@ -2,6 +2,7 @@ import ParticlesNetwork from "./components/ParticlesNetwork ";
 import Carousal from "./components/Carousal";
 import "./App.css";
 import React from "react";
+import Marq from "./components/Marq";
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
       <div className="carousal w-full bg-black">
         <Carousal />
       </div>
+      
+      <div className="carousal w-full bg-black">
+        <Marq/>
+      </div>
+
     </>
   );
 }
